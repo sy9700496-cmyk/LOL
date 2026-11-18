@@ -1,31 +1,69 @@
+# =========================
 # Dependencies
+# =========================
 node_modules/
 jspm_packages/
 bower_components/
 .pnp/
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnpm-store/
 
+# =========================
 # Build output
+# =========================
 dist/
 build/
 out/
 .output/
 .next/
 .nuxt/
+.svelte-kit/
 .vuepress/dist/
 public/build/
 .cache/
 .parcel-cache/
 .temp/
-coverage/
+tmp/
+*.tsbuildinfo
 
+# =========================
+# Static site generators
+# =========================
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+public/admin/config.yml
+
+# =========================
+# Testing & coverage
+# =========================
+coverage/
+.nyc_output/
+/playwright-report/
+/test-results/
+/cypress/videos/
+/cypress/screenshots/
+
+# =========================
 # Environment & secrets
+# =========================
 .env
 .env.*
 !.env.example
 *.local
+*.pem
+*.key
 
+# =========================
 # Logs
+# =========================
 logs/
 *.log
 npm-debug.log*
@@ -34,28 +72,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# =========================
 # Editor & OS
+# =========================
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json.example
 .idea/
 *.swp
 *.swo
+*~
 .DS_Store
 Thumbs.db
 desktop.ini
+ehthumbs.db
 
-# Package manager files
-.npm/
-.yarn/
-.pnpm-store/
-*.tsbuildinfo
-
-# Static site generators
-_site/
-.svelte-kit/
-public/admin/config.yml
-
+# =========================
 # Misc
+# =========================
 *.pid
 *.seed
 *.tgz
+.eslintcache
+.stylelintcache
+.cache-loader/
